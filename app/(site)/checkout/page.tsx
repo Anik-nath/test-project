@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic'
 import SubscriptionCheckout from "./_components/subscription-checkout";
 import { getServerCart } from "@/lib/actions/cart-cookie";
 import CourseCheckout from "./_components/course-checkout";
