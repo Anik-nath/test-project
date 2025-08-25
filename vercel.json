@@ -1,3 +1,9 @@
 {
-    "regions": ["bom1"]
+  "functions": {
+    "app/checkout/page.tsx": {
+      "maxDuration": 30
+    }
+  },
+  "regions": ["iad1"],
+  "framework": "nextjs"
 }
