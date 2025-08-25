@@ -1,6 +1,6 @@
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import { db } from "../../../../lib/db";
 import { z } from "zod";
 import { generateUsername } from "@/lib/utils/stringUtils";
@@ -41,7 +41,7 @@ export const authOptions = {
           } else {
             // Temporarily disable new user creation for Google sign-in
             // Redirect back to sign-in page with error message
-           return "/signin?error=অ্যাকাউন্ট%20পাওয়া%20যায়নি.";
+            return "/signin?error=অ্যাকাউন্ট%20পাওয়া%20যায়নি.";
           }
 
           // COMMENTED OUT: New user creation code temporarily disabled

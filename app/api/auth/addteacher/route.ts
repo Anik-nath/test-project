@@ -2,7 +2,7 @@
 import { db } from "@/lib/db";
 import jwt from "jsonwebtoken";
 import { NextResponse } from "next/server";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import { generateUsername } from "@/lib/utils/stringUtils";
 import nodemailer from "nodemailer";
 import { sendCredentialTemplate } from "@/lib/utils/emailTemplates/send-credential-template";
@@ -24,9 +24,12 @@ export async function POST(req) {
     });
 
     if (existingUser) {
-      return new Response(JSON.stringify({ error: "ব্যবহারকারী ইতোমধ্যে রয়েছে" }), {
-        status: 400,
-      });
+      return new Response(
+        JSON.stringify({ error: "ব্যবহারকারী ইতোমধ্যে রয়েছে" }),
+        {
+          status: 400,
+        }
+      );
     }
 
     const token = jwt.sign(

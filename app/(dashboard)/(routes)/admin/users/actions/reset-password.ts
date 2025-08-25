@@ -5,7 +5,7 @@ import { db } from "@/lib/db";
 import { getServerUserSession } from "@/lib/getServerUserSession";
 import { resetPasswordTemplate } from "@/lib/utils/emailTemplates/reset-password";
 import { sendCredentialTemplate } from "@/lib/utils/emailTemplates/send-credential-template";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import nodemailer from "nodemailer";
 
 export async function resetPassWord(

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { db } from "@/lib/db";
 import { sendCredentialTemplate } from "@/lib/utils/emailTemplates/send-credential-template";

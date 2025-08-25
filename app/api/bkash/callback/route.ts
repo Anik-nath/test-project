@@ -4,7 +4,7 @@ import { NextResponse, NextRequest } from "next/server";
 import jwt from "jsonwebtoken";
 import { sendCredentialTemplate } from "@/lib/utils/emailTemplates/send-credential-template";
 import nodemailer from "nodemailer";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import { sendSubscriptionCredential } from "@/lib/utils/emailTemplates/sendSubscriptionCredential";
 import preparePurchaseDetails from "@/lib/utils/preparePurchaseDetails";
 
