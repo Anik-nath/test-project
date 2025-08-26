@@ -104,7 +104,7 @@ export default function page() {
         deleniti ab praesentium.
       </p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae,
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae,    
         eum unde corrupti officiis eligendi dolores repellat nemo veritatis eius
         ad, delectus, quaerat hic temporibus? Magnam blanditiis sapiente
         voluptate nulla eaque molestias autem placeat nesciunt quisquam facilis
