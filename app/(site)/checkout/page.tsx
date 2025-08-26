@@ -16,7 +16,7 @@ interface CheckOutPageProps {
 
 // Use default export with async function
 export default async function page({ searchParams }: CheckOutPageProps) {
-  console.log("Checkout page loaded on server");
+  console.log("Checkout page loaded on server test");
 
   // get data from cookies
   const cartData = await getServerCart();
