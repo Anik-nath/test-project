@@ -83,5 +83,5 @@ export default async function page({ searchParams }: CheckOutPageProps) {
     );
   }
 
-  return null; // Add fallback return
+  return null; 
 }
