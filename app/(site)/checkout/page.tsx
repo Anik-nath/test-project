@@ -1,5 +1,3 @@
-import React from "react";
-
 import SubscriptionCheckout from "./_components/subscription-checkout";
 import { getServerCart } from "@/lib/actions/cart-cookie";
 import CourseCheckout from "./_components/course-checkout";
@@ -16,14 +14,13 @@ interface CheckOutPageProps {
   };
 }
 
-const page = async ({ searchParams }: CheckOutPageProps) => {
+// Use default export with async function
+export default async function page({ searchParams }: CheckOutPageProps) {
   console.log("Checkout page loaded on server");
+
   // get data from cookies
   const cartData = await getServerCart();
 
-  // if (cartData.items.length === 0) {
-  //   redirect("/");
-  // }
   if (cartData.items.length === 0) {
     return (
       <div className="app-container py-20 text-center min-h-[60vh] flex items-center justify-center">
@@ -85,6 +82,6 @@ const page = async ({ searchParams }: CheckOutPageProps) => {
       </div>
     );
   }
-};
 
-export default page;
+  return null; // Add fallback return
+}
